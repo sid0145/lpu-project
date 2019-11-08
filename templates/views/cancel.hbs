@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/cancel.css">
+
+</head>
+<body>
+    {{>header}}
+    <div class="main">
+        <h1>serch for the cancelled train</h1>
+        <input type="date" id="date">
+        <button type="button" class="btn btn-success" id="done" onclick="return validate()">find</button>
+    </div>
+    <div class="sid">
+        <table class="table">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">Sl. No.	</th>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Number</th>
+                            <th scope="col">	Source</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Train Type</th>
+                          </tr>
+                        </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>TDL-FKD PASS</td>
+                    <td>54466</td>
+                    <td>TDL</td>
+                    <td>FBD</td>
+                    <td>PASSENGER</td>
+                </tr>
+                 <tr>
+                    <th scope="row">2</th>
+                    <td>TDL-ETH PASS</td>
+                    <td>54467</td>
+                    <td>TDL</td>
+                    <td>ETAH</td>
+                    <td>PASSENGER</td>
+                </tr>
+                 <tr>
+                    <th scope="row">3</th>
+                    <td>BAND-HSRA DEMU SPL</td>
+                    <td>06571</td>
+                    <td>BAND	</td>
+                    <td>HSRA</td>
+                    <td>SPECIAL</td>
+                </tr>
+                 <tr>
+                    <th scope="row">4</th>
+                    <td>HSRA-BAND-DEMU SPL</td>
+                    <td>06572</td>
+                    <td>HSRA</td>
+                    <td>	BAND</td>
+                    <td>SPECIAL</td>
+                </tr>
+                 <tr>
+                    <th scope="row">5</th>
+                    <td>HSRA-BAND DEMU SPL</td>
+                    <td>06574</td>
+                    <td>HSRA</td>
+                    <td>BAND</td>
+                    <td>SPECIAL</td>
+                </tr> <tr>
+                    <th scope="row">6</th>
+                    <td>BAND-HSRA DEMU SPL</td>
+                    <td>06573</td>
+                    <td>BAND</td>
+                    <td>	HSRA</td>
+                    <td>SPECIAL</td>
+                </tr>
+
+             </tbody>
+        </table>
+    </div>
+    <script>
+        function validate()
+        {
+            $('document').ready(function(){
+                    $('#done').click(function(){
+                        $('.sid').show('slow');
+                    });
+                });
+        }
+    </script>
+
+</body>
+</html>

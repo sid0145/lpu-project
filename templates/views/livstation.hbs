@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="/css/livstation.css">
+    <script
+   src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+
+</head>
+<body>
+    {{>header}}
+       <div class="head">
+          <h1>All Train on Station within 2 Hours</h1>  
+       </div>
+        <div class="main">
+            <input type="text" placeholder="STN CODE" id="code">
+            <button type="button" class="btn btn-success" id="click" onclick="return validate()">find</button>
+        </div>
+        <div class="sid">
+                <table class="table">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">Sl. No.	</th>
+                            <th scope="col">Train Name [Number]</th>
+                            <th scope="col">Source/Destination</th>
+                            <th scope="col">Sch. Arrival/Departure [Delay]</th>
+                            <th scope="col">Exp. Arrival/Departure [Delay]</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>JUC-NDLS EXPRESS [14682]</td>
+                            <td>/	</td>
+                            <td>05:15/05:25 []</td>
+                            <td>05:15/05:25 [] </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>LDH-LNK DMU [74965]td>
+                            <td>/</td>
+                            <td>SRC/05:30 []td>
+                            <td>SRC/05:30 []</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>LDH HSR PASS [54634]	</td>
+                            <td>/</td>
+                            <td>SRC/05:30 []</td>
+                            <td>SRC/05:30 []td>
+                          </tr>
+                          <tr>
+                                <th scope="row">4</th>
+                                <td>GKP BNZ SPL [2537]</td>
+                                <td>/</td>
+                                <td>SRC/05:25 []</td>
+                                <td>SRC/05:25 []</td>
+                              </tr>
+                              <tr>
+                                    <th scope="row">5</th>
+                                    <td>BJU NDLS AC SPL [4403]</td>
+                                    <td>/</td>
+                                    <td>05:15/05:25 []	</td>
+                                    <td>05:15/05:25 []</td>
+                                  </tr>
+                                  <tr>
+                                        <th scope="row">6</th>
+                                        <td>INTERCITY EXP [12531]</td>
+                                        <td>/</td>
+                                        <td>SRC/05:30 []</td>
+                                        <td>SRC/05:30 []</td>
+                                      </tr>
+                                      <tr>
+                                            <th scope="row">7</th>
+                                            <td>GKP LTT EXP [15018]	</td>
+                                            <td>/</td>
+                                            <td>SRC/05:30 []</td>
+                                            <td>SRC/05:30 []</td>
+                                          </tr>
+                        </tbody>
+                      </table>
+        </div>
+        <div class="sid1">
+                <table class="table">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">Sl. No.	</th>
+                            <th scope="col">Train Name [Number]</th>
+                            <th scope="col">Source/Destination</th>
+                            <th scope="col">Sch. Arrival/Departure [Delay]</th>
+                            <th scope="col">Exp. Arrival/Departure [Delay]</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>ANVT CPR SPL [5116]</td>
+                            <td>/	</td>
+                            <td>05:10/05:20 []</td>
+                            <td>05:10/05:20 [] </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>PASS [55025]</td>
+                            <td>/</td>
+                            <td>SRC/05:20 []</td>
+                            <td>SRC/05:20 []</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>GKP-SV-DMU SPL [75010]	</td>
+                            <td>/</td>
+                            <td>SRC/05:20 []</td>
+                            <td>SRC/05:20 []</td>
+                          </tr>
+                          <tr>
+                                <th scope="row">4</th>
+                                <td>GKP BNZ SPL [2537]</td>
+                                <td>/</td>
+                                <td>SRC/05:25 []</td>
+                                <td>SRC/05:25 []</td>
+                              </tr>
+                              <tr>
+                                    <th scope="row">5</th>
+                                    <td>BJU NDLS AC SPL [4403]</td>
+                                    <td>/</td>
+                                    <td>05:15/05:25 []	</td>
+                                    <td>05:15/05:25 []</td>
+                                  </tr>
+                                  <tr>
+                                        <th scope="row">6</th>
+                                        <td>INTERCITY EXP [12531]</td>
+                                        <td>/</td>
+                                        <td>SRC/05:30 []</td>
+                                        <td>SRC/05:30 []</td>
+                                      </tr>
+                                      <tr>
+                                            <th scope="row">7</th>
+                                            <td>GKP LTT EXP [15018]	</td>
+                                            <td>/</td>
+                                            <td>SRC/05:30 []</td>
+                                            <td>SRC/05:30 []</td>
+                                          </tr>
+                        </tbody>
+                      </table>
+        </div>
+    <script>
+        function validate(){
+        var val=document.getElementById('code').value;
+
+        var org1="GKP";
+        var org2="GND";
+        if(val===org1)
+        {
+            $('document').ready(function()
+            {
+                $('#click').click(function()
+                {
+                    $('.sid').show();
+                });
+          });
+        }
+        else if(val===org2){
+            $('document').ready(function()
+            {
+                $('#click').click(function()
+                {
+                    $('.sid1').show();
+                });
+          })
+
+        }
+        else{
+            alert("check the stn code");
+        }
+        }
+    </script>
+
+</body>
+</html>

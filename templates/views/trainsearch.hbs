@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href=" https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/train.css">
+
+</head>
+<body>
+    {{>header}}
+    <div class="main">
+      <h1>Search for the train route</h1>
+    <input type="number" id="code">
+    <button type="button" class="btn btn-success" id="done" onclick="return validate()">find</button>
+</div>
+    <div class="sid">
+            <table class="table">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">Sl. No.</th>
+                        <th scope="col">Station Name</th>
+                        <th scope="col">Code</th>
+                        <th scope="col">Day</th>
+                        <th scope="col">Arrival</th>
+                        <th scope="col">Departure</th>
+                        <th scope="col">Halt</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                         <td>AMRITSAR JN.</td>
+                         <td>ASR</td>
+                         <td>0</td>
+                         <td>06:15:00</td>
+                         <td>06:15:00</td>
+                         <td>0</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>BEAS JN</td>
+                        <td>BEAS</td>
+                        <td>0</td>
+                        <td>BEAS</td>
+                        <td>06:45:00</td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>JALANDHAR CA</td>
+                        <td>JRC</td>
+                        <td>0</td>
+                        <td>07:35:00</td>
+                        <td>07:37:00</td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                     <tr>
+                        <th scope="row">4</th>
+                        <td>JALANDHAR CI</td>
+                        <td>JUC</td>
+                        <td>0</td>
+                        <td>07:22:00</td>
+                        <td>07:27:00</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>PHAGWARA JN.</td>
+                        <td>PGW</td>
+                        <td>0</td>
+                        <td>07:50:00</td>
+                        <td>07:52:00</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>PHILLAUR JN.</td>
+                        <td>PHR	</td>
+                        <td>0</td>
+                        <td>08:10:00</td>
+                        <td>08:12:00	</td>
+                        <td>0</td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>LUDHIANA JN.	</td>
+                        <td>LDH	</td>
+                        <td>0</td>
+                        <td>08:35:00</td>
+                        <td>08:40:00</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                            <th scope="row">8</th>
+                            <td>SIRHIND JN.</td>
+                            <td>SIR</td>
+                            <td>0</td>
+                            <td>09:33:00</td>
+                            <td>09:35:00</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                  </table>
+    </div>
+    <div class="sid1">
+        <table class="table">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">Sl. No.</th>
+                        <th scope="col">Station Name</th>
+                        <th scope="col">Code</th>
+                        <th scope="col">Day</th>
+                        <th scope="col">Arrival</th>
+                        <th scope="col">Departure</th>
+                        <th scope="col">Halt</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                         <td>DEHRA DUN</td>
+                         <td>DDN</td>
+                         <td>0</td>
+                         <td>17:00:00</td>
+                         <td>17:00:00</td>
+                         <td>0</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>HARIDWAR JN</td>
+                        <td>HW</td>
+                        <td>0</td>
+                        <td>18:10:00</td>
+                        <td>18:15:00</td>
+                        <td>0</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>ROORKEE</td>
+                        <td>RK</td>
+                        <td>0</td>
+                        <td>18:49:00</td>
+                        <td>18:51:00</td>
+                        <td>0</td>
+                      </tr>
+                         <tr>
+                        <th scope="row">4</th>
+                        <td>SAHARANPUR J</td>
+                        <td>SRE</td>
+                        <td>0</td>
+                        <td>	19:30:00</td>
+                        <td>19:50:00</td>
+                        <td>0</td>
+                    </tr>
+                     <tr>
+                        <th scope="row">5</th>
+                        <td>MUZAFFARNAGA</td>
+                        <td>MOZ</td>
+                        <td>0</td>
+                        <td>20:33:00</td>
+                        <td>20:35:00</td>
+                        <td>0</td>
+                    </tr>
+                 
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>MEERUT CITY.</td>
+                        <td>MTC</td>
+                        <td>0</td>
+                        <td>21:15:00</td>
+                        <td>21:17:00</td>
+                        <td>0</td>
+                    </tr>
+                    
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>GHAZIABAD JN</td>
+                        <td>GZB</td>
+                        <td>0</td>
+                        <td>22:03:00</td>
+                        <td>22:05:00</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                            <th scope="row">8</th>
+                            <td>NEW DELHI</td>
+                            <td>NDLS</td>
+                            <td>0</td>
+                            <td>22:45:00</td>
+                            <td>22:45:00</td>
+                            <td>0</td>
+                        </tr>
+                    </tbody>
+                  </table>
+    </div>
+    <script>
+        function validate()
+        {
+            var val=document.getElementById('code').value;
+
+            var first=12018;
+            var second=12046;
+            if(val==first)
+            {
+                $('document').ready(function(){
+                    $('#done').click(function(){
+                        $('.sid').show('slow');
+                    });
+                });
+            }
+            else if(val==second)
+            {
+                $('document').ready(function(){
+                    $('#done').click(function(){
+                        $('.sid1').show();
+                    });
+                });
+
+            }
+            else{
+                alert("please enter a valid number");
+            }
+        }
+    </script>
+
+    
+</body>
+</html>

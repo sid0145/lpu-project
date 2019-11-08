@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>login</title>
+      <link rel="stylesheet" href="/css/login.css">
+        <link rel="stylesheet" href="/css/index.css">
+    <script>
+        // for login validation
+        function validate()
+        {
+              var user=document.getElementById('username').value;
+              var pass=document.getElementById('passwordid').value;
+              
+              var userval=/^[a-zA-Z0-9 ]{5,}$/;
+              var passval=/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
+
+            if(userval.test(user))
+            {
+                document.getElementById('usernameerr').innerHTML=" "
+            }
+            else{
+                document.getElementById('usernameerr').innerHTML="name should be atleast 5 char long";
+                return false;
+            }
+            if(passval.test(pass))
+            {
+                document.getElementById('passworderr').innerHTML=" " 
+            }
+            else{
+                document.getElementById('usernameerr').innerHTML=" wrong choice of password!"
+                return false;
+            }
+
+        }
+
+        // for sign-up validation
+        function validatesign()
+        {
+            var user=document.getElementById('signname').value;
+            var pass=document.getElementById('signpassword').value;
+            var cpass=document.getElementById('signcpassword').value;
+            var emai=document.getElementById('signemail').value;
+            
+            var userval=/^[a-zA-Z0-9 ]{5,}$/;
+            var passval=/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,16}$/;
+            var emailva=/^[A-Za-z0-9]{3,}@[A-Za-z]{3,5}[.]{1}[A-Za-z.]{2,6}$/;
+            
+            if(userval.test(user))
+            {
+                document.getElementById('signnameerr').innerHTML=" "
+            }
+            else{
+                document.getElementById('signnameerr').innerHTML="name should be in proper format "
+                return false; 
+            }
+
+            if(passval.test(pass))
+            {
+                document.getElementById('signpassworderr').innerHTML=" "
+            }
+            else{
+                 document.getElementById('signpassworderr').innerHTML="passwaord format is wrong! "
+             return false;
+             }
+            if(cpass.match(passval))
+            {
+                document.getElementById('signpassworderr').innerHTML=" "
+            }
+            else{
+                document.getElementById('signpassworderr').innerHTML="password is not matching "
+              return false;
+            }
+
+          if(emailva.test(emai))
+          {
+            document.getElementById('signemailerr').innerHTML=" "
+          }
+          else{
+          document.getElementById('signemailerr').innerHTML="email is not valid! "
+          return false;
+          }
+        }
+    </script>
+</head>
+<body>
+    {{>header}}
+    <div class="login-page">
+        <div class="form">
+            <form class="register-form" onsubmit="return validatesign()" action="/home">
+                <legend><h1>sign up</h1></legend>
+                <input type="text" placeholder="name" id="signname"/>
+                <span id="signnameerr" style="color:red"></span>
+                <input type="text" placeholder="password" id="signpassword"/>
+                <span id="signpassworderr" style="color:red"></span>
+                <input type="text" placeholder="confirm password" id="signcpassword"/>
+                <span id="signcerr" style="color:red"></span>
+                <input type="text" placeholder="email id" id="signemail"/>
+                <span id="signemailerr" style="color:red"></span>
+                <button type="submit">create</button>
+                <p class="message">already account!<a href="#"> login</a> </p>
+            </form>
+
+            <!-- login page code -->
+            
+            <form class="login-form" action="/home" onsubmit="return validate()">
+                <legend><h1>Login</h1></legend>
+                    <input type="text" placeholder="name" id="username"/>
+                    <span id="usernameerr" style="color:red"></span>
+                    <input type="text" placeholder="password" id="passwordid"/>
+                    <span id="passworderr" style="color:red"></span>
+                    <button type="submit">login</button>
+                    <p class="message">not a user?<a href="#">sign up </a></p>
+             </form>
+        </div>
+    </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $('.message a').click(function(){
+                $('form').animate({height:"toggle", opacity:"toggle"},"slow");
+            });
+        </script>
+</body>
+</html>

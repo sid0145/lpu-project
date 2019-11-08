@@ -1,0 +1,105 @@
+
+#show
+{ 
+    display:none;
+    margin-top: 20px;
+  
+}
+.set
+{
+    text-align: center;
+    margin-right: 0px;
+    background-color: yellow;
+}
+#t_no
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 0px;
+}
+#date
+{  margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 0px;
+}
+#done
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.allow
+{
+    text-align: center;
+    background-color: rgba(241, 230, 230, 0.13);
+    color:red;
+}
+.show1
+{
+    display:none;
+    margin-top: 20px;
+}
+.allow1
+{
+    text-align: center;
+    color:green;
+}
+
+
+
+
+
+
+.container{
+    width:100%;
+    margin-left: 0%;
+}
+.progressbar
+{
+    counter-reset: step;
+}
+.progressbar li
+{
+list-style-type: none;
+float:left;
+width:25%;
+position: relative;
+text-align: center;
+}
+.progressbar li:before{
+content: counter(step);
+counter-increment: step;
+width:30px;
+height: 30px;
+line-height:30px;
+border:1px solid black;
+text-align: center;
+display: block;
+margin: 0 auto 10px auto;
+border-radius: 50% ;
+background-color: #fff;
+
+}
+.progressbar li::after{
+content: '';
+position: absolute;
+width: 100%;
+height:1px;
+background-color: #ddd;
+top:15px;
+left:-50%;
+z-index: -1;
+
+}
+.progressbar li:first-child::after{
+content: none;
+}
+.active
+{
+color:green;
+}
+.progressbar li.active::before{
+border-color: green;
+}
+.progressbar li.active + li::after{
+background-color: red;
+}

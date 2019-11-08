@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="/css/api.css">
+</head>
+<body>
+  {{>header}}
+     <div class="set">
+        Enter number:<input type="number" id="t_no">
+        <br>
+        Enter date: <input type="date" id="date">
+        <br>
+        <button type="button" class="btn btn-success" id="done" onclick="return validate()">find</button>
+    </div>
+       
+        <div id="show">
+            <div class="allow">
+               <h5> **train is not started yet</h5>
+            </div>
+                <table class="table">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">s.no</th>
+                            <th scope="col">Station name</th>
+                            <th scope="col">Sch/act arrival</th>
+                            <th scope="col">Delay</th>
+                            <th scope="col">Sch/act depature</th>
+                            <th scope="col">Delay</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                                <th scope="row">1</th>
+                                <td>chandigarh</td>
+                                <td>00:00/00:00</td>
+                                <td>00M</td>
+                                <td>12:00/12:00</td>
+                                <td>00:00/00:00</td>
+                          </tr>
+                          <tr>
+                                <th scope="row">2</th>
+                                <td>ambala</td>
+                                <td>00:00/00:00</td>
+                                <td>00M</td>
+                                <td>12:40/12:40</td>
+                                <td>00:00/00:00</td>
+                          </tr>
+                          <tr>
+                                <th scope="row">3</th>
+                                <td>karnal</td>
+                                <td>00:00/00:00</td>
+                                <td>00M</td>
+                                <td>13:32/13:32</td>
+                                <td>00:00/00:00</td>
+                          </tr>
+                          <tr>
+                                <th scope="row">4</th>
+                                <td>new delhi</td>
+                                <td>00:00/00:00</td>
+                                <td>00M</td>
+                                <td>15:25/15:25</td>
+                                <td>00:00/00:00</td>
+                          </tr>
+                        </tbody>
+                      </table>
+            
+    
+         </div>
+         <div class="show1">
+                <div class="allow1">
+                        <h5> **train is on time and reached at mitawal jn.</h5>
+                         <div class="container">
+        <div class="progressbar">
+            <ul>
+            <li class="active">tundla jn.</li>
+            <li>	mitawal</li>
+            <li>barhan</li>
+            <li>chamrola</li>
+            </ul>
+        </div>
+    </div>
+
+                     </div>
+                <table class="table">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">s.no</th>
+                            <th scope="col">Station name</th>
+                            <th scope="col">Sch/act arrival</th>
+                            <th scope="col">Delay</th>
+                            <th scope="col">Sch/act depature</th>
+                            <th scope="col">Delay</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                                <th scope="row">1</th>
+                                <td>tundla jn.</td>
+                                <td>00:00/00:00</td>
+                                <td>00M</td>
+                                <td>06:30/06:30</td>
+                                <td>00M</td>
+                          </tr>
+                          <tr>
+                                <th scope="row">2</th>
+                                <td>mitawal</td>
+                                <td>06:39/06:39</td>
+                                <td>00M</td>
+                                <td>06:40/06:40</td>
+                                <td>00M</td>
+                          </tr>
+                          <tr>
+                                <th scope="row">3</th>
+                                <td>barhan</td>
+                                <td>06:48/06:48</td>
+                                <td>00M</td>
+                                <td>06:49/06:49</td>
+                                <td>00M</td>
+                          </tr>
+                          <tr>
+                                <th scope="row">4</th>
+                                <td>chamrola</td>
+                                <td>06:56/06:56</td>
+                                <td>00M</td>
+                                <td>06:57/06:57</td>
+                                <td>00M</td>
+                          </tr>
+                        </tbody>
+                      </table>
+         </div>
+         <script>
+             function validate(){
+                 var val=document.getElementById('t_no').value;
+                 var x=12046;
+                 var y=12018;
+                 if(val==x)
+                 {
+                    $('document').ready(function(){
+                 $('#done').click(function(){
+                     $('#show').toggle();
+                 });
+             });
+            }
+            else if(val==y)
+            {
+                $('document').ready(function(){
+                 $('#done').click(function(){
+                     $('.show1').toggle();
+                 });
+             });
+
+
+            }
+                 else{
+                     alert("enter valid number");
+                     return false;
+                 }
+        
+              
+
+             }
+               
+         </script>
+</body>
+</html>

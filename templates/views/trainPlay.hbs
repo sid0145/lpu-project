@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="" id="form">
+        <input id="input1" type="number">
+        <button id="submit" class="btn btn-primary">Submit </button>
+    </form>
+    <div id="shu">
+        <table id="table">
+            
+            
+            </table>
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+       
+        document.querySelector('form').addEventListener('submit',(e) => {
+            e.preventDefault()
+
+            var testValue = document.getElementById('input1').value
+            var result1;
+            var api_url = 'https://api.railwayapi.com/v2/route/train/'+testValue+'/apikey/qeu9g0efav/'
+            $( document ).ready(function() {
+             
+                   
+                    
+
+                    function loadDoc(url) {
+                  var xhttp = new XMLHttpRequest();
+                   xhttp.onreadystatechange = function() {
+                 if (this.readyState == 4 && this.status == 200) {
+                     console.log(this.responseText)
+                 }
+                  };
+  xhttp.open("GET", url, true);
+  xhttp.send();
+} 
+loadDoc(api_url)
+                    
+                    } )
+                    
+            })
+
+        
+    </script>
+{{!-- 
+    <script>
+
+    $('#form').click(function () {
+    $.ajax({
+        url: 'https://api.railwayapi.com/v2/route/train/'+15707+'/apikey/srci7d7r9p/',
+        data: {
+            txtsearch: $('#input1').val()
+        },
+        type: "GET",
+        dataType: "html",
+        success: function (data) {
+            var result = $('<div />').append(data).find('#showresults').html();
+            $('#value').html(result);
+        },
+        error: function (xhr, status) {
+            alert("Sorry, there was a problem!");
+        }
+    });
+});
+
+</script> --}}
+    
+</body>
+</html>

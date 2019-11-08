@@ -1,0 +1,38 @@
+.main
+{
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+}
+#code
+{
+    /* height:30%;
+    width: 20%; */
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+.set
+{  margin-left: 5px;
+    padding: 8px;
+}
+.head
+{
+    text-align: center;
+}
+#click
+{
+    padding:8px;
+    width:9%;
+    margin-left: 5px;
+}
+.sid{
+    display:none;
+}
+.sid1
+{
+    display:none;
+}
+body{
+    background-color:lightgrey;
+}
